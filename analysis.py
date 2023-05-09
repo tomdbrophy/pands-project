@@ -14,4 +14,14 @@ df = pd.read_csv("iris.data",header=None)
 # Outline the shape of the data
 #print (df.shape)
 
-print(df.info)
+#Information about the dataset 
+#print(df.info)
+
+# Gives info about columns such as mean values and standard deviation
+#print(df.describe())
+
+# Checks for missing values
+#print(df.isnull().sum())
+
+data = df.drop_duplicates(subset=4)
+print(data)
