@@ -31,6 +31,17 @@ df = pd.read_csv("iris.data",header=0, names=['SepalLengthCm', 'SepalWidthCm', '
 # Counts the number of each species recorded
 #print(df.value_counts([4]))
 
-sns.scatterplot(data=df, x='SepalLengthCm', y='SepalWidthCm', hue='Species')
-plt.legend()
-plt.show()
+# Produces a scatter plot of Sepal Length vs Sepal Width
+#sns.scatterplot(data=df, x='SepalLengthCm', y='SepalWidthCm', hue='Species')
+#plt.legend()
+#plt.show()
+
+# Produces a scatter plot of Petal Length vs Petal Width
+#sns.scatterplot(data=df, x='PetalLengthCm', y='PetalWidthCm', hue='Species')
+#plt.legend()
+#plt.show()
+
+# Produces a set of scatter plots comparing each pair of variables
+#sns.pairplot(df.drop([0],axis=0),hue='Species', height=2)
+#plt.show(block=True)
+
