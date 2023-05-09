@@ -29,6 +29,8 @@ plt.hist(df['PetalWidthCm'], bins=10)
 plt.savefig('petal_width_histogram.png')
 plt.close()
 
+
+
 # Print top 5 rows
 #print(df.head())
 
@@ -62,8 +64,9 @@ plt.close()
 #plt.show()
 
 # Produces a set of scatter plots comparing each pair of variables
-#sns.pairplot(df.drop([0],axis=0),hue='Species', height=2)
-#plt.show(block=True)
+sns.pairplot(df.drop([0],axis=0),hue='Species', height=2)
+plt.savefig('scatterplot_array.png')
+plt.close()
 
 # Produces a set of histograms for each variable
 '''
