@@ -6,7 +6,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Read in the dataset
-df = pd.read_csv("iris.data")
+df = pd.read_csv("iris.data",header=None)
 
 # Print top 5 rows
-print(df.head())
+#print(df.head())
+
+# Outline the shape of the data
+#print (df.shape)
+
+print(df.info)
