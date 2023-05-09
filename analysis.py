@@ -66,6 +66,29 @@ plt.show()
 # Calculates pairwise correlations between variables
 #print(df.corr(method='pearson'))
 
-sns.heatmap(df.corr(method='pearson'), annot=True)
+# Create heatmaps based on pairwise correlations
+#sns.heatmap(df.corr(method='pearson'), annot=True)
+#plt.show()
+
+# Box plot by species and variable
+'''
+def graph(y):
+    sns.boxplot(x='Species', y=y, data=df)
+
+plt.figure(figsize=(10,10))
+
+plt.subplot(221)
+graph('SepalLengthCm')
+
+plt.subplot(222)
+graph('SepalWidthCm')
+
+plt.subplot(223)
+graph('PetalLengthCm')
+
+plt.subplot(224)
+graph('PetalWidthCm')
 
 plt.show()
+'''
+
