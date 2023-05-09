@@ -9,6 +9,26 @@ import seaborn as sns
 # Read in the dataset
 df = pd.read_csv("iris.data",header=0, names=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species'])
 
+# Histogram for Sepal Length
+plt.hist(df['SepalLengthCm'], bins=10)
+plt.savefig('sepal_length_histogram.png')
+plt.close()
+
+# Histogram for Sepal Width
+plt.hist(df['SepalWidthCm'], bins=10)
+plt.savefig('sepal_width_histogram.png')
+plt.close()
+
+# Histogram for Petal Length
+plt.hist(df['PetalLengthCm'], bins=10)
+plt.savefig('petal_length_histogram.png')
+plt.close()
+
+# Histogram for Petal Width
+plt.hist(df['PetalWidthCm'], bins=10)
+plt.savefig('petal_width_histogram.png')
+plt.close()
+
 # Print top 5 rows
 #print(df.head())
 
