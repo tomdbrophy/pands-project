@@ -45,3 +45,27 @@ df = pd.read_csv("iris.data",header=0, names=['SepalLengthCm', 'SepalWidthCm', '
 #sns.pairplot(df.drop([0],axis=0),hue='Species', height=2)
 #plt.show(block=True)
 
+# Produces a set of histograms for each variable
+'''
+fig, axes = plt.subplots(2,2,figsize=(10,10))
+
+axes[0,0].set_title('Sepal Length')
+axes[0,0].hist(df['SepalLengthCm'], bins=10)
+
+axes[0,1].set_title('Sepal Width')
+axes[0,1].hist(df['SepalWidthCm'], bins=10)
+
+axes[1,0].set_title('Petal Length')
+axes[1,0].hist(df['PetalLengthCm'], bins=10)
+
+axes[1,1].set_title('Petal Width')
+axes[1,1].hist(df['PetalWidthCm'], bins=10)
+
+plt.show()
+'''
+# Calculates pairwise correlations between variables
+#print(df.corr(method='pearson'))
+
+sns.heatmap(df.corr(method='pearson'), annot=True)
+
+plt.show()
