@@ -48,24 +48,29 @@ data_described = df.describe()
 data_described_string = data_described.to_string()
 f.write(data_described_string)
 
+f.write('\n\nBelow gives information on whether any columns contain null values:\n\n')
+data_null = df.isnull().sum()
+f.write(str(data_null))
+f.write('\nWe can see from the above that there are no missing values in the dataset.\n')
+
+f.write('\n\nBelow drops duplicates to confirm the number of unique values in the Species Column.\n\n')
+data_uniques = df.drop_duplicates(subset='Species')
+data_uniques_string = data_uniques.to_string()
+f.write(data_uniques_string)
+f.write('\n\nFrom the above we can see that there are only 3 unique values for Species in the dataset.\n')
+
+f.write('\n\nBelow counts the number of entries in the dataset for each Species:\n\n')
+data_counts = df.value_counts(['Species'])
+f.write(str(data_counts))
+f.write('\nFrom the above we can see that there is an equal number (50) of entries for each Species.\n\n')
+
+f.write('\n\nBelow figures show pairwise correlations between variables:\n\n')
+data_corr = df.corr(method='pearson')
+#data_corr_string = data_corr.to_string
+f.write(str(data_corr))
+
 f.close()
 
-
-#Information about the dataset 
-#print(df.info)
-
-# Gives info about columns such as mean values and standard deviation
-#print(df.describe())
-
-# Checks for missing values
-#print(df.isnull().sum())
-
-# Checks for duplicate values in species column. Only 3 unique values
-#data = df.drop_duplicates(subset=4)
-#print(data)
-
-# Counts the number of each species recorded
-#print(df.value_counts([4]))
 
 # Produces a scatter plot of Sepal Length vs Sepal Width
 #sns.scatterplot(data=df, x='SepalLengthCm', y='SepalWidthCm', hue='Species')
@@ -100,12 +105,11 @@ axes[1,1].hist(df['PetalWidthCm'], bins=10)
 
 plt.show()
 '''
-# Calculates pairwise correlations between variables
-#print(df.corr(method='pearson'))
 
-# Create heatmaps based on pairwise correlations
-#sns.heatmap(df.corr(method='pearson'), annot=True)
-#plt.show()
+# Create heatmap based on pairwise correlations
+sns.heatmap(df.corr(method='pearson'), annot=True)
+plt.savefig('correlation_heatmap.png')
+plt.close()
 
 # Box plot by species and variable
 '''
