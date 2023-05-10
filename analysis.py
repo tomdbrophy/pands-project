@@ -77,17 +77,69 @@ versicolor_df = df[df['Species'] == 'Iris-versicolor']
 virginica_df = df[df['Species'] == 'Iris-virginica']
 
 # Check to see if data is normally distributed
+# Shapiro checks for normal distribution. The below function then gives a binary response based on p-value being over or under 0.05
 def norm_check (data):
     stat, p_val = shapiro(data)
-    if p_val < 0.5:
+    if p_val < 0.05:
         return 'Not normally distributed'
     else:
         return 'Normally distributed'
 
+# Normality check for sepal length of all species combined.
+norm_sep_len = norm_check(df['SepalLengthCm'])
+f.write(f'\n\nThe sepal length for all sepcies in the dataset combined is:\n{norm_sep_len}')
 
-sepal_length_setosa = setosa_df['SepalLengthCm']
-norm_sep_len_set = norm_check(sepal_length_setosa)
+# Normality checks for sepal length of each species.
+norm_sep_len_set = norm_check(setosa_df['SepalLengthCm'])
 f.write(f'\n\nThe sepal length of Iris Setosa in this dataset is:\n{norm_sep_len_set}')
+
+norm_sep_len_vers = norm_check(versicolor_df['SepalLengthCm'])
+f.write(f'\n\nThe sepal length of Iris Versicolor in this dataset is:\n{norm_sep_len_vers}')
+
+norm_sep_len_virg = norm_check(virginica_df['SepalLengthCm'])
+f.write(f'\n\nThe sepal length for Iris Virginica in this dataset is:\n{norm_sep_len_virg}')
+
+# Normality check for sepal width of all species combined.
+norm_sep_wid = norm_check(df['SepalWidthCm'])
+f.write(f'\n\nThe sepal width for all species combined is:\n{norm_sep_wid}')
+
+# Normality check for sepal width of each species.
+norm_sep_wid_set = norm_check(setosa_df['SepalWidthCm'])
+f.write(f'\n\nThe sepal width for Iris Setosa in this datset is:\n{norm_sep_wid_set}')
+
+norm_sep_wid_vers = norm_check(versicolor_df['SepalWidthCm'])
+f.write(f'\n\nThe sepal width for Iris Versicolor in this dataset is:\n{norm_sep_wid_vers}')
+
+norm_sep_wid_virg = norm_check(virginica_df['SepalWidthCm'])
+f.write(f'\n\nThe sepal width for Iris Virginica in this dataset is:\n{norm_sep_wid_virg}')
+
+# Normality check for petal length of all species combined.
+norm_pet_len = norm_check(df['PetalLengthCm'])
+f.write(f'\n\nThe petal length for all species in this dataset combined is:\n{norm_pet_len}')
+
+# Normality check for petal length of individual species.
+norm_pet_len_set = norm_check(setosa_df['PetalLengthCm'])
+f.write(f'\n\nThe petal length for Iris Setosa in this dataset is:\n{norm_pet_len_set}')
+
+norm_pet_len_vers = norm_check(versicolor_df['PetalLengthCm'])
+f.write(f'\n\nThe petal length for Iris Versicolor in this dataset is:\n{norm_pet_len_vers}')
+
+norm_pet_len_virg = norm_check(virginica_df['PetalLengthCm'])
+f.write(f'\n\nThe petal length for Iris Virginica in this datset is:\n{norm_pet_len_virg}')
+
+# Normality check for Petal width of all species combined.
+norm_pet_wid = norm_check(df['PetalWidthCm'])
+f.write(f'\n\nThe petal width for all species in this datset combined is:\n{norm_pet_wid}')
+
+# Normality check for petal width of individual species.
+norm_pet_wid_set = norm_check(setosa_df['PetalWidthCm'])
+f.write(f'\n\nThe petal width for Iris Setosa in this dataset is:\n{norm_pet_wid_set}')
+
+norm_pet_wid_vers = norm_check(versicolor_df['PetalWidthCm'])
+f.write(f'\n\nThe petal width for Iris Versicolor in this dataset is:\n{norm_pet_wid_vers}')
+
+norm_pet_wid_virg = norm_check(virginica_df['PetalWidthCm'])
+f.write(f'\n\nThe petal width for Iris Virginica in this datset is:\n{norm_pet_wid_virg}')
 
 
 
