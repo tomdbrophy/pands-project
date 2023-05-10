@@ -1,0 +1,15 @@
+https://stackoverflow.com/questions/31247198/python-pandas-write-content-of-dataframe-into-text-file
+
+https://www.w3schools.com/python/python_file_write.asp
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html
+
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
+
+https://seaborn.pydata.org/generated/seaborn.pairplot.html
+
+https://seaborn.pydata.org/tutorial/relational.html#relational-tutorial
+
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.value_counts.html
+
+https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html

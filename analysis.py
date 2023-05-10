@@ -30,8 +30,12 @@ plt.savefig('petal_width_histogram.png')
 plt.close()
 
 f = open('iris_variable_summary.txt', 'w')
-f.write('This file will contain information summarising variables in the Iris Dataset.')
+f.write('This file will contain information summarising variables in the Iris Dataset.\n')
+data_head = df.head()
+data_head_string = data_head.to_string()
+f.write(data_head_string)
 f.close()
+
 
 
 # Print top 5 rows
