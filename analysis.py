@@ -5,6 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from scipy.stats import shapiro
+from scipy.stats import lognorm
 
 # Read in the dataset
 df = pd.read_csv("iris.data",header=None, names=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species'])
@@ -68,6 +70,14 @@ f.write('\n\nBelow figures show pairwise correlations between variables:\n\n')
 data_corr = df.corr(method='pearson')
 #data_corr_string = data_corr.to_string
 f.write(str(data_corr))
+
+# Separate out data by Species
+setosa_df = df[df['Species'] == 'Iris-setosa']
+versicolor_df = df[df['Species'] == 'Iris-versicolor']
+virginica_df = df[df['Species'] == 'Iris-virginica']
+
+# Check to see if data is normally distributed
+
 
 f.close()
 
