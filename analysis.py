@@ -11,6 +11,11 @@ from scipy.stats import lognorm
 # Read in the dataset
 df = pd.read_csv("iris.data",header=None, names=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species'])
 
+# Separate out data by Species
+setosa_df = df[df['Species'] == 'Iris-setosa']
+versicolor_df = df[df['Species'] == 'Iris-versicolor']
+virginica_df = df[df['Species'] == 'Iris-virginica']
+
 # Histogram for Sepal Length
 plt.hist(df['SepalLengthCm'], bins=10)
 plt.savefig('sepal_length_histogram.png')
@@ -39,16 +44,33 @@ data_head = df.head()
 data_head_string = data_head.to_string()
 f.write(data_head_string)
 
+# Shape
 f.write('\n\nBelow shows the shape of the data:\n')
 data_shape = df.shape
 data_shape_string = str(data_shape)
 f.write(data_shape_string)
 f.write('\nThis tells us that there are 150 rows of data and 5 columns.\n\n')
 
+# Statistical Description
 f.write('\nBelow gives some statistical information about the data in each column:\n\n')
 data_described = df.describe()
 data_described_string = data_described.to_string()
 f.write(data_described_string)
+
+# Statistical description broken down by species
+f.write('\n\nFurther statistical info broken down by species.')
+f.write('\nIris Setosa:\n')
+data_desc_set = setosa_df.describe()
+data_desc_set_str = data_desc_set.to_string()
+f.write(data_desc_set_str)
+f.write('\nIris Versicolor:\n')
+data_desc_vers = versicolor_df.describe()
+data_desc_vers_str = data_desc_vers.to_string()
+f.write(data_desc_vers_str)
+f.write('\nIris Virginica:\n')
+data_desc_virg = virginica_df.describe()
+data_desc_virg_str = data_desc_virg.to_string()
+f.write(data_desc_virg_str)
 
 f.write('\n\nBelow gives information on whether any columns contain null values:\n\n')
 data_null = df.isnull().sum()
@@ -71,10 +93,7 @@ data_corr = df.corr(method='pearson')
 #data_corr_string = data_corr.to_string
 f.write(str(data_corr))
 
-# Separate out data by Species
-setosa_df = df[df['Species'] == 'Iris-setosa']
-versicolor_df = df[df['Species'] == 'Iris-versicolor']
-virginica_df = df[df['Species'] == 'Iris-virginica']
+
 
 # Check to see if data is normally distributed
 # Shapiro checks for normal distribution. The below function then gives a binary response based on p-value being over or under 0.05
@@ -140,6 +159,8 @@ f.write(f'\n\nThe petal width for Iris Versicolor in this dataset is:\n{norm_pet
 
 norm_pet_wid_virg = norm_check(virginica_df['PetalWidthCm'])
 f.write(f'\n\nThe petal width for Iris Virginica in this datset is:\n{norm_pet_wid_virg}')
+
+
 
 
 
