@@ -88,7 +88,6 @@ plt.savefig('scatterplot_array.png')
 plt.close()
 
 # Produces a set of histograms for each variable
-'''
 fig, axes = plt.subplots(2,2,figsize=(10,10))
 
 axes[0,0].set_title('Sepal Length')
@@ -103,8 +102,8 @@ axes[1,0].hist(df['PetalLengthCm'], bins=10)
 axes[1,1].set_title('Petal Width')
 axes[1,1].hist(df['PetalWidthCm'], bins=10)
 
-plt.show()
-'''
+plt.savefig('grouped_histograms.png')
+plt.close()
 
 # Create heatmap based on pairwise correlations
 sns.heatmap(df.corr(method='pearson'), annot=True)
@@ -112,7 +111,7 @@ plt.savefig('correlation_heatmap.png')
 plt.close()
 
 # Box plot by species and variable
-'''
+
 def graph(y):
     sns.boxplot(x='Species', y=y, data=df)
 
@@ -130,6 +129,7 @@ graph('PetalLengthCm')
 plt.subplot(224)
 graph('PetalWidthCm')
 
-plt.show()
-'''
+plt.savefig('box_plots.png')
+plt.close()
+
 
