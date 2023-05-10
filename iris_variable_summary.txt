@@ -65,4 +65,5 @@ Below figures show pairwise correlations between variables:
 SepalLengthCm       1.000000     -0.109369       0.871754      0.817954
 SepalWidthCm       -0.109369      1.000000      -0.420516     -0.356544
 PetalLengthCm       0.871754     -0.420516       1.000000      0.962757
-PetalWidthCm        0.817954     -0.356544       0.962757      1.000000
+PetalWidthCm        0.817954     -0.356544       0.962757      1.000000The sepal length of Iris Setosa in this dataset is:
+Not normally distributed

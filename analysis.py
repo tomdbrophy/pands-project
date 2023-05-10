@@ -77,6 +77,18 @@ versicolor_df = df[df['Species'] == 'Iris-versicolor']
 virginica_df = df[df['Species'] == 'Iris-virginica']
 
 # Check to see if data is normally distributed
+def norm_check (data):
+    stat, p_val = shapiro(data)
+    if p_val < 0.5:
+        return 'Not normally distributed'
+    else:
+        return 'Normally distributed'
+
+
+sepal_length_setosa = setosa_df['SepalLengthCm']
+norm_sep_len_set = norm_check(sepal_length_setosa)
+f.write(f'\n\nThe sepal length of Iris Setosa in this dataset is:\n{norm_sep_len_set}')
+
 
 
 f.close()
