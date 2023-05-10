@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sns
 
 # Read in the dataset
-df = pd.read_csv("iris.data",header=0, names=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species'])
+df = pd.read_csv("iris.data",header=None, names=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species'])
 
 # Histogram for Sepal Length
 plt.hist(df['SepalLengthCm'], bins=10)
@@ -29,20 +29,27 @@ plt.hist(df['PetalWidthCm'], bins=10)
 plt.savefig('petal_width_histogram.png')
 plt.close()
 
+# This section deals with outputting summary information to a text file.
 f = open('iris_variable_summary.txt', 'w')
-f.write('This file will contain information summarising variables in the Iris Dataset.\n')
+f.write('This file will contain information summarising variables in the Iris Dataset.\n\n')
+f.write('Below shows the head of the data file.\nThis includes the column headings and top 5 rows of data.\n\n')
 data_head = df.head()
 data_head_string = data_head.to_string()
 f.write(data_head_string)
+
+f.write('\n\nBelow shows the shape of the data:\n')
+data_shape = df.shape
+data_shape_string = str(data_shape)
+f.write(data_shape_string)
+f.write('\nThis tells us that there are 150 rows of data and 5 columns.\n\n')
+
+f.write('\nBelow gives some statistical information about the data in each column:\n\n')
+data_described = df.describe()
+data_described_string = data_described.to_string()
+f.write(data_described_string)
+
 f.close()
 
-
-
-# Print top 5 rows
-#print(df.head())
-
-# Outline the shape of the data
-#print (df.shape)
 
 #Information about the dataset 
 #print(df.info)
