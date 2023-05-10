@@ -111,7 +111,6 @@ plt.savefig('correlation_heatmap.png')
 plt.close()
 
 # Box plot by species and variable
-
 def graph(y):
     sns.boxplot(x='Species', y=y, data=df)
 
@@ -132,4 +131,22 @@ graph('PetalWidthCm')
 plt.savefig('box_plots.png')
 plt.close()
 
+# Sepal Length Kernel Density Estimation
+sns.kdeplot(data=df, x='SepalLengthCm', hue='Species')
+plt.savefig('sepal_length_kde.png')
+plt.close()
 
+# Sepal Width Kernel Density Estimation
+sns.kdeplot(data=df, x='SepalWidthCm', hue='Species')
+plt.savefig('sepal_width_kde.png')
+plt.close()
+
+# Petal Length Kernel Density Estimation
+sns.kdeplot(data=df, x='PetalLengthCm', hue='Species')
+plt.savefig('petal_length_kde.png')
+plt.close()
+
+# Petal Width Kernel Density Estimation
+sns.kdeplot(data=df, x='PetalWidthCm', hue='Species')
+plt.savefig('petal_width_kde.png')
+plt.close()
