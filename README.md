@@ -28,7 +28,7 @@ Running some initial statistical analysis using DataFrame.describe() show us the
 |Std| 0.828 | 0.434 | 1.764 | 0.763 |
 
 These measures give us an indication of the dataset as a whole but as they include all species together they are of limited use in any functional analysis. The following breaks down the mean value information by species:
-| | Sepal Length | Sepal Width | Petal Length | Petal Width | Species |
+| | Sepal Length | Sepal Width | Petal Length | Petal Width |
 |---|---|---|---|---|
 | Iris Setosa | 5.006 | 3.418 | 1.464 | 0.244 |
 | Iris Versicolor | 5.936 | 2.77 | 4.26 | 1.326 |
