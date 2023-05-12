@@ -22,17 +22,20 @@ Initial analysis confirms the shape of the data (150, 5), meaning 150 rows of da
 
 Running some initial statistical analysis using DataFrame.describe() show us the following broad information about the data:
 
-| | Sepal Length | Sepal Width | Petal Length | Petal Width |
+| | Sepal Length (cm) | Sepal Width (cm) | Petal Length (cm) | Petal Width(cm) |
 |---|---|---|---|---|
 |Mean| 5.843 | 3.054 | 3.759 | 1.199 |
 |Std| 0.828 | 0.434 | 1.764 | 0.763 |
 
 These measures give us an indication of the dataset as a whole but as they include all species together they are of limited use in any functional analysis. The following breaks down the mean value information by species:
-| | Sepal Length | Sepal Width | Petal Length | Petal Width |
+| | Sepal Length(cm) | Sepal Width (cm) | Petal Length (cm) | Petal Width (cm) |
 |---|---|---|---|---|
 | Iris Setosa | 5.006 | 3.418 | 1.464 | 0.244 |
 | Iris Versicolor | 5.936 | 2.77 | 4.26 | 1.326 |
 | Iris Virginica | 6.588 | 2.974 | 5.552 | 2.026 |
+
+For a more visually informative version of the above information we can use a set of box plots to show differences across variables and species.
+![Box plot showiing each variable and species](box_plots.png)
 
 
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
