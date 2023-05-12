@@ -73,6 +73,7 @@ data_desc_virg = virginica_df.describe()
 data_desc_virg_str = data_desc_virg.to_string()
 f.write(data_desc_virg_str)
 
+# Checks for null values
 f.write('\n\nBelow gives information on whether any columns contain null values:\n\n')
 data_null = df.isnull().sum()
 f.write(str(data_null))
