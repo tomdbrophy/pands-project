@@ -56,9 +56,17 @@ Further investigation of the distribution of data within the dataset can be done
 |Versicolor | Y | Y | Y | N |
 |Viriginica | Y | Y | Y | Y |
 
+The above table uses the Shapiro method to calculate whether data is normally distributed. For quick assessment a visual inspection can also be done to see if data is likely to be normally distributed. Normally distributed data tends to have a common "bell-curve" shape. For visual inspection a kernel density estimate (KDE) plot can be useful [^3] [^7].
+The following KDE plots generated using seaborn.kdeplot give a good representation of the spread of the data.
+![Sepal Length KDE Plot](sepal_length_kde.png)
+![Sepal Width KDE Plot](sepal_width_kde.png)
+![Petal Length KDE Plot](petal_length_kde.png)
+![Petal Width KDE Plot](petal_width_kde.png)
+
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
 [^2]: https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 [^3]: https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
 [^4]: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html
 [^5]: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html
 [^6]: https://www.statology.org/normality-test-python/
+[^7]: https://seaborn.pydata.org/generated/seaborn.kdeplot.html
