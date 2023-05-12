@@ -68,6 +68,14 @@ The above kernel density estimate plots portray the variation in data similarly 
 Pairwise correlations can also be used to see if a change in one variable is likely to be a predictor of a correlated change in another variable. Below correlation heatmap shows the degree of correlation between variables:
 ![Correlation Heatmap](correlation_heatmap.png)
 
+In the above correlation heatmap the diagonal line going from top left to bottom right can be discounted. The correlation along that line is 1 as every variable of course correlates with itself.
+A few interesting points on observing the correlation heatmap:
+- Petal length and petal width are very highly correlated. This would seem to indicate that an increase in one is nearly always matched by an increase in the other (and vice versa).
+- Sepal length has a large (although slightly lesser) correlation with both petal length and petal width.
+- Sepal length and sepal width have very little correlation.
+- Sepal width is somewhat negatively correlated with both petal length and petal width.
+- Sepal width is not strongly correlated with any other variable. What correlation is there is a negative correlation (meaning as sepal width increases all other variable tend to decrease).
+
 
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
 [^2]: https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
