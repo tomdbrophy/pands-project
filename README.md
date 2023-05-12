@@ -21,12 +21,14 @@ There are multiple sources to get the iris dataset online and there are some sli
 Initial analysis confirms the shape of the data (150, 5), meaning 150 rows of data and 5 columns. This is as expected having sourced the data from the UCI Machine Learning Repository [^1]. Using DataFrame.isnull() also confirms that there are no null values, so there is no missing data.
 
 Running some initial statistical analysis using DataFrame.describe() show us the following broad information about the data:
+
 | | Sepal Length | Sepal Width | Petal Length | Petal Width |
 |---|---|---|---|---|
 |Mean| 5.843 | 3.054 | 3.759 | 1.199 |
 |Std| 0.828 | 0.434 | 1.764 | 0.763 |
 
 These measures give us an indication of the dataset as a whole but as they include all species together they are of limited use in any functional analysis. The following breaks down the mean value information by species:
+
 | | Sepal Length | Sepal Width | Petal Length | Petal Width | Species |
 |-----|---|---|---|---|
 | Iris Setosa | 5.006 | 3.418 | 1.464 | 0.244 |
