@@ -43,7 +43,7 @@ From the above plot we can see that across 3 out of 4 variables the Iris Setosa 
 The above set of scatterplots reveal a very clear distinction between the Iris Setosa and the other two sepcies. This distinction is likely why the dataset has been so popular as a resource for machine learning initiates.
 A further look at the scatterplots also shows that the data for the Iris Versicolor and Iris Virginica, while generally separate, has a degree of mixing across all variables.
 
-
+When looking at the data it is also worthwhile to examine the spread of the data across each variable. This can be done visually by using histograms.
 
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
 [^2]: https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/

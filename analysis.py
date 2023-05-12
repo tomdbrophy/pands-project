@@ -198,6 +198,63 @@ axes[1,1].hist(df['PetalWidthCm'], bins=10)
 plt.savefig('grouped_histograms.png')
 plt.close()
 
+# Produces a set of histograms for each variable for the Iris Setosa
+fig, axes = plt.subplots(2,2,figsize=(10,10))
+
+axes[0,0].set_title('Sepal Length')
+axes[0,0].hist(setosa_df['SepalLengthCm'], bins=10)
+
+axes[0,1].set_title('Sepal Width')
+axes[0,1].hist(setosa_df['SepalWidthCm'], bins=10)
+
+axes[1,0].set_title('Petal Length')
+axes[1,0].hist(setosa_df['PetalLengthCm'], bins=10)
+
+axes[1,1].set_title('Petal Width')
+axes[1,1].hist(setosa_df['PetalWidthCm'], bins=10)
+
+fig.suptitle('Iris Setosa')
+plt.savefig('grouped_histograms_setosa.png')
+plt.close()
+
+# Produces a set of histograms for each variable for the Iris Versicolor
+fig, axes = plt.subplots(2,2,figsize=(10,10))
+
+axes[0,0].set_title('Sepal Length')
+axes[0,0].hist(versicolor_df['SepalLengthCm'], bins=10)
+
+axes[0,1].set_title('Sepal Width')
+axes[0,1].hist(versicolor_df['SepalWidthCm'], bins=10)
+
+axes[1,0].set_title('Petal Length')
+axes[1,0].hist(versicolor_df['PetalLengthCm'], bins=10)
+
+axes[1,1].set_title('Petal Width')
+axes[1,1].hist(versicolor_df['PetalWidthCm'], bins=10)
+
+fig.suptitle('Iris Versicolor')
+plt.savefig('grouped_histograms_versicolor.png')
+plt.close()
+
+# Produces a set of histograms for each variable for Iris Virginica
+fig, axes = plt.subplots(2,2,figsize=(10,10))
+
+axes[0,0].set_title('Sepal Length')
+axes[0,0].hist(virginica_df['SepalLengthCm'], bins=10)
+
+axes[0,1].set_title('Sepal Width')
+axes[0,1].hist(virginica_df['SepalWidthCm'], bins=10)
+
+axes[1,0].set_title('Petal Length')
+axes[1,0].hist(virginica_df['PetalLengthCm'], bins=10)
+
+axes[1,1].set_title('Petal Width')
+axes[1,1].hist(virginica_df['PetalWidthCm'], bins=10)
+
+fig.suptitle('Iris Virginica')
+plt.savefig('grouped_histograms_virginica.png')
+plt.close()
+
 # Create heatmap based on pairwise correlations
 sns.heatmap(df.corr(method='pearson'), annot=True)
 plt.savefig('correlation_heatmap.png')
