@@ -7,6 +7,7 @@ import pandas as pd
 import seaborn as sns
 from scipy.stats import shapiro
 from scipy.stats import lognorm
+from sklearn.model_selection import train_test_split
 
 # Read in the dataset
 df = pd.read_csv("iris.data",header=None, names=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species'])
@@ -160,10 +161,6 @@ f.write(f'\n\nThe petal width for Iris Versicolor in this dataset is:\n{norm_pet
 norm_pet_wid_virg = norm_check(virginica_df['PetalWidthCm'])
 f.write(f'\n\nThe petal width for Iris Virginica in this datset is:\n{norm_pet_wid_virg}')
 
-
-
-
-
 f.close()
 
 
@@ -245,3 +242,13 @@ plt.close()
 sns.kdeplot(data=df, x='PetalWidthCm', hue='Species')
 plt.savefig('petal_width_kde.png')
 plt.close()
+
+
+'''
+dropped_df = df.drop(['Species'], axis=1)
+
+
+f = open('iris_variable_summary.txt', 'a')
+f.write()
+f.close()
+'''

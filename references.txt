@@ -13,3 +13,7 @@ https://seaborn.pydata.org/tutorial/relational.html#relational-tutorial
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.value_counts.html
 
 https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+
+https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
+
+https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
