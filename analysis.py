@@ -102,9 +102,9 @@ f.write(str(data_corr))
 def norm_check (data):
     stat, p_val = shapiro(data)
     if p_val < 0.05:
-        return 'Not normally distributed'
+        return f'Not normally distributed. P-Value = {p_val}'
     else:
-        return 'Normally distributed'
+        return f'Normally distributed. P-Value = {p_val}'
 
 # Normality check for sepal length of all species combined.
 norm_sep_len = norm_check(df['SepalLengthCm'])

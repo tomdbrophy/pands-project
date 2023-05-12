@@ -100,49 +100,49 @@ PetalLengthCm       0.871754     -0.420516       1.000000      0.962757
 PetalWidthCm        0.817954     -0.356544       0.962757      1.000000
 
 The sepal length for all sepcies in the dataset combined is:
-Not normally distributed
+Not normally distributed. P-Value = 0.01018026564270258
 
 The sepal length of Iris Setosa in this dataset is:
-Normally distributed
+Normally distributed. P-Value = 0.4595010578632355
 
 The sepal length of Iris Versicolor in this dataset is:
-Normally distributed
+Normally distributed. P-Value = 0.4647378921508789
 
 The sepal length for Iris Virginica in this dataset is:
-Normally distributed
+Normally distributed. P-Value = 0.25831347703933716
 
 The sepal width for all species combined is:
-Normally distributed
+Normally distributed. P-Value = 0.07518772780895233
 
 The sepal width for Iris Setosa in this datset is:
-Normally distributed
+Normally distributed. P-Value = 0.20464898645877838
 
 The sepal width for Iris Versicolor in this dataset is:
-Normally distributed
+Normally distributed. P-Value = 0.3379843533039093
 
 The sepal width for Iris Virginica in this dataset is:
-Normally distributed
+Normally distributed. P-Value = 0.18089871108531952
 
 The petal length for all species in this dataset combined is:
-Not normally distributed
+Not normally distributed. P-Value = 7.545183366985952e-10
 
 The petal length for Iris Setosa in this dataset is:
-Normally distributed
+Normally distributed. P-Value = 0.054648224264383316
 
 The petal length for Iris Versicolor in this dataset is:
-Normally distributed
+Normally distributed. P-Value = 0.1584763377904892
 
 The petal length for Iris Virginica in this datset is:
-Normally distributed
+Normally distributed. P-Value = 0.10977503657341003
 
 The petal width for all species in this datset combined is:
-Not normally distributed
+Not normally distributed. P-Value = 1.8646931110311016e-08
 
 The petal width for Iris Setosa in this dataset is:
-Not normally distributed
+Not normally distributed. P-Value = 1.8525122413848294e-06
 
 The petal width for Iris Versicolor in this dataset is:
-Not normally distributed
+Not normally distributed. P-Value = 0.027278218418359756
 
 The petal width for Iris Virginica in this datset is:
-Normally distributed
+Normally distributed. P-Value = 0.08695302903652191

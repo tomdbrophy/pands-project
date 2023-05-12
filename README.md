@@ -48,7 +48,17 @@ When looking at the data it is also worthwhile to examine the spread of the data
 ![Histograms for Iris Versicolor](grouped_histograms_versicolor.png)
 ![Histograms for Iris Virginica](grouped_histograms_virginica.png)
 
+Further investigation of the distribution of data within the dataset can be done by using scipy.stats.shapiro to check whether data is normally distributed [^5] [^6]. The results of normality tests run on the data are summarised below. This is displayed in a binary format below with Y representing normal distribution and N representing not normal distribution. Further information on specific p-value results from normality test can be found in the included iris_variable_summary.txt file.
+| | Sepal Length | Sepal Width | Petal Length | Petal Width |
+|---|---|---|---|---|
+| All | N | Y | N | N |
+| Setosa | Y | Y | Y | N |
+|Versicolor | Y | Y | Y | N |
+|Viriginica | Y | Y | Y | Y |
+
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
 [^2]: https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 [^3]: https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
 [^4]: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html
+[^5]: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html
+[^6]: https://www.statology.org/normality-test-python/
