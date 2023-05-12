@@ -35,7 +35,11 @@ These measures give us an indication of the dataset as a whole but as they inclu
 | Iris Virginica | 6.588 | 2.974 | 5.552 | 2.026 |
 
 For a more visually informative version of the above information we can use a set of box plots to show differences across variables and species.
-![Box plot showiing each variable and species](box_plots.png)
+![Box plot showing each variable and species](box_plots.png)
+
+From the above plot we can see that across 3 out of 4 variables the Iris Setosa has the smallest measurements. This can be further visually confirmed by plotting the data on a set of scatterplots.
+![Scatterplots of variables and species](scatterplot_array.png)
+
 
 
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
