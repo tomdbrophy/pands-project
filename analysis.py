@@ -302,11 +302,3 @@ plt.savefig('petal_width_kde.png')
 plt.close()
 
 
-'''
-dropped_df = df.drop(['Species'], axis=1)
-
-
-f = open('iris_variable_summary.txt', 'a')
-f.write()
-f.close()
-'''

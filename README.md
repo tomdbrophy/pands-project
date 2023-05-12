@@ -63,6 +63,11 @@ The following KDE plots generated using seaborn.kdeplot give a good representati
 ![Petal Length KDE Plot](petal_length_kde.png)
 ![Petal Width KDE Plot](petal_width_kde.png)
 
+The above kernel density estimate plots portray the variation in data similarly to the previously used scatterplots. Of particular interest are the petal length and petal width KDE plots, showing Iris Setosa as completely separate from the other two species. Iris Versicolor and Iris Virginica can be seen to overlap across all variables.
+
+Pairwise correlations can also be used to see if a change in one variable is likely to be a predictor of a correlated change in another variable. Below correlation heatmap shows the degree of correlation between variables:
+![Correlation Heatmap](correlation_heatmap.png)
+
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
 [^2]: https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 [^3]: https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
