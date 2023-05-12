@@ -40,6 +40,9 @@ For a more visually informative version of the above information we can use a se
 From the above plot we can see that across 3 out of 4 variables the Iris Setosa has the smallest measurements. This can be further visually confirmed by plotting the data on a set of scatterplots.
 ![Scatterplots of variables and species](scatterplot_array.png)
 
+The above set of scatterplots reveal a very clear distinction between the Iris Setosa and the other two sepcies. This distinction is likely why the dataset has been so popular as a resource for machine learning initiates.
+A further look at the scatterplots also shows that the data for the Iris Versicolor and Iris Virginica, while generally separate, has a degree of mixing across all variables.
+
 
 
 [^1]: https://archive.ics.uci.edu/ml/datasets/iris
