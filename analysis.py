@@ -257,6 +257,7 @@ plt.close()
 
 # Create heatmap based on pairwise correlations
 sns.heatmap(df.corr(method='pearson'), annot=True)
+plt.tight_layout()
 plt.savefig('correlation_heatmap.png')
 plt.close()
 
